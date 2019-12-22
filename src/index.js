@@ -223,7 +223,7 @@ const ReactPageScroller = ({
       event.preventDefault();
     };
 
-    pageContainer.current.addEventListener(Events.TOUCHMOVE, touchMove);
+    pageContainer.current.addEventListener(Events.TOUCHMOVE, touchMove, { passive: false });
     pageContainer.current.addEventListener(Events.KEYDOWN, keyPress);
 
     checkRenderOnMount();
